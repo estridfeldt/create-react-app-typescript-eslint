@@ -18,7 +18,10 @@
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
     "@typescript-eslint/eslint-plugin": "^4.17.0",
-    "@typescript-eslint/parser": "^4.17.0"
+    "@typescript-eslint/parser": "^4.17.0",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-prettier": "^3.3.1",
+    "prettier": "^2.2.1"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -27,17 +30,24 @@
     "eject": "react-scripts eject",
     "lint": "tsc --noEmit && eslint src/**/*.ts{,x}"
   },
+  "prettier": {
+    "singleQuote": true,
+    "bracketSpacing": true,
+    "trailingComma": "all"
+  },
   "eslintConfig": {
     "extends": [
       "react-app",
       "react-app/jest",
       "plugin:react/recommended",
       "eslint:recommended",
-      "plugin:@typescript-eslint/recommended"
+      "plugin:@typescript-eslint/recommended",
+      "plugin:prettier/recommended"
     ],
     "plugins": [
       "react",
-      "@typescript-eslint"
+      "@typescript-eslint",
+      "prettier"
     ],
     "parser": "@typescript-eslint/parser",
     "env": {
